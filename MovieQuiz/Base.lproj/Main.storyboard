@@ -26,9 +26,15 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbT-0n-csq">
                                         <rect key="frame" x="10" y="11" width="32" height="23"/>
                                         <state key="normal" image="pause"/>
+                                        <connections>
+                                            <action selector="playPauseMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WZF-zQ-cnI"/>
+                                        </connections>
                                     </button>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="R7T-ks-Scd">
                                         <rect key="frame" x="48" y="7" width="318" height="31"/>
+                                        <connections>
+                                            <action selector="changeMusicTime:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ebd-3C-WOU"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -45,6 +51,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO0-QE-Y1e">
                                 <rect key="frame" x="381" y="829" width="23" height="23"/>
                                 <state key="normal" image="music"/>
+                                <connections>
+                                    <action selector="showHideSoundBar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G4y-vJ-zVA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKW-DW-iP3">
                                 <rect key="frame" x="0.0" y="774" width="414" height="36"/>
@@ -89,6 +98,9 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDh-R3-MXD">
                                         <rect key="frame" x="184" y="296" width="46" height="30"/>
+                                        <connections>
+                                            <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f1r-N5-uHY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -130,6 +142,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ivQuiz" destination="Em3-a3-405" id="VwJ-7e-BLy"/>
+                        <outlet property="slMusic" destination="R7T-ks-Scd" id="Lze-yF-gUX"/>
+                        <outlet property="viSoundBar" destination="XLo-Vg-bKZ" id="yLG-d4-qc5"/>
+                        <outletCollection property="btOption" destination="XeF-sM-lqs" collectionClass="NSMutableArray" id="J9Q-e5-KKV"/>
+                        <outletCollection property="btOption" destination="kOz-3b-LvX" collectionClass="NSMutableArray" id="6Kf-SO-dht"/>
+                        <outletCollection property="btOption" destination="5HJ-a0-Sz8" collectionClass="NSMutableArray" id="wdl-LH-Zfo"/>
+                        <outletCollection property="btOption" destination="GKW-DW-iP3" collectionClass="NSMutableArray" id="ATK-Ca-DRO"/>
                         <segue destination="3WK-W7-mTZ" kind="show" identifier="gameOverSegue" id="Ur5-qT-FG5"/>
                     </connections>
                 </viewController>
@@ -176,6 +195,9 @@
                                 <state key="normal" title="JOGAR NOVAMENTE">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btPlayAgain:" destination="3WK-W7-mTZ" eventType="touchUpInside" id="cSq-Wr-1iE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VFJ-Bm-KYH"/>
@@ -194,6 +216,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zTs-do-smK"/>
+                    <connections>
+                        <outlet property="lbCorrectAnswers" destination="ceX-Ao-0ol" id="HWa-P3-I8G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BK4-bx-OnN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
