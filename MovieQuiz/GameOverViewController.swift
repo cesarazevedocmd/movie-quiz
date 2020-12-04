@@ -11,8 +11,14 @@ class GameOverViewController: UIViewController {
 
     @IBOutlet weak var lbCorrectAnswers: UILabel!
     
+    var score: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        lbCorrectAnswers.text = "\(score)"
     }
     
     @IBAction func btPlayAgain(_ sender: UIButton) {
