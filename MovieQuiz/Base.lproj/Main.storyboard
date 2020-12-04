@@ -20,6 +20,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McW-mb-3X5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLo-Vg-bKZ">
                                 <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                                 <subviews>
@@ -62,6 +66,9 @@
                                     <constraint firstAttribute="height" constant="36" id="adX-tR-uY6"/>
                                 </constraints>
                                 <state key="normal" title="Nome do Filme"/>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tcn-rh-gGp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5HJ-a0-Sz8">
                                 <rect key="frame" x="0.0" y="730" width="414" height="36"/>
@@ -70,6 +77,9 @@
                                     <constraint firstAttribute="height" constant="36" id="yE2-lN-kpk"/>
                                 </constraints>
                                 <state key="normal" title="Nome do Filme"/>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jgu-1S-br5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOz-3b-LvX">
                                 <rect key="frame" x="0.0" y="686" width="414" height="36"/>
@@ -78,6 +88,9 @@
                                     <constraint firstAttribute="height" constant="36" id="zqx-Bj-Q3u"/>
                                 </constraints>
                                 <state key="normal" title="Nome do Filme"/>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aPk-LN-RxN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeF-sM-lqs">
                                 <rect key="frame" x="0.0" y="642" width="414" height="36"/>
@@ -86,6 +99,9 @@
                                     <constraint firstAttribute="height" constant="36" id="D9a-v7-uz7"/>
                                 </constraints>
                                 <state key="normal" title="Nome do Filme"/>
+                                <connections>
+                                    <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qaE-4c-Wxt"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7S-TS-Qgm">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="622"/>
@@ -98,9 +114,6 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDh-R3-MXD">
                                         <rect key="frame" x="184" y="296" width="46" height="30"/>
-                                        <connections>
-                                            <action selector="checkAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f1r-N5-uHY"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -124,17 +137,21 @@
                             <constraint firstItem="XeF-sM-lqs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6WJ-SD-HkR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mO0-QE-Y1e" secondAttribute="trailing" constant="10" id="AoH-cT-h5c"/>
                             <constraint firstItem="XeF-sM-lqs" firstAttribute="top" secondItem="E7S-TS-Qgm" secondAttribute="bottom" constant="20" id="BdC-Tf-Kuf"/>
+                            <constraint firstItem="McW-mb-3X5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CXc-8r-I8A"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mO0-QE-Y1e" secondAttribute="bottom" constant="10" id="DOd-X6-viM"/>
                             <constraint firstItem="XLo-Vg-bKZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FjA-Lk-G2x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GKW-DW-iP3" secondAttribute="bottom" constant="52" id="Jj5-qi-RwP"/>
+                            <constraint firstItem="McW-mb-3X5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="L9e-J3-FZu"/>
                             <constraint firstItem="5HJ-a0-Sz8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N7q-fr-TVf"/>
                             <constraint firstItem="E7S-TS-Qgm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Nw3-0Q-pTe"/>
                             <constraint firstItem="GKW-DW-iP3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ov6-6u-GGH"/>
                             <constraint firstItem="XLo-Vg-bKZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PSx-DB-nrR"/>
                             <constraint firstItem="E7S-TS-Qgm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UhX-DA-Rly"/>
+                            <constraint firstAttribute="bottom" secondItem="McW-mb-3X5" secondAttribute="bottom" id="aj8-x9-ltB"/>
                             <constraint firstItem="XLo-Vg-bKZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eaI-UD-JUR"/>
                             <constraint firstItem="kOz-3b-LvX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fLD-88-xzo"/>
                             <constraint firstItem="5HJ-a0-Sz8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gbf-ic-Bra"/>
+                            <constraint firstItem="McW-mb-3X5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hxK-2y-erw"/>
                             <constraint firstItem="XeF-sM-lqs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="knX-Ca-w0Q"/>
                             <constraint firstItem="kOz-3b-LvX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l4A-LM-Fvj"/>
                             <constraint firstItem="kOz-3b-LvX" firstAttribute="top" secondItem="XeF-sM-lqs" secondAttribute="bottom" constant="8" id="oQs-pR-M9D"/>

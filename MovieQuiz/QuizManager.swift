@@ -48,7 +48,7 @@ class QuizManager {
         return round!
     }
     
-    func checkAnswer(_ answer: String){
+    func checkAnswer(_ answer: String) {
         if answer == round?.quiz.name {
             score += 1
         }
